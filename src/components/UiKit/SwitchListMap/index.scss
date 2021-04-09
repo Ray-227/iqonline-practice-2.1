@@ -1,0 +1,42 @@
+@import "@/styles/varColors.scss";
+@import "@/fonts/mixinFonts.scss";
+
+.switchListMap {
+  width: auto;
+  height: 40px;
+  border-radius: 20px;
+  border: solid 1px $Cloud;
+
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.switchListMap__text {
+  @include MontserratNormal(16px, 30px);
+  color: $Earth;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  transition: all ease 200ms;
+  margin: 0 30px;
+}
+
+.switchListMap__text:hover {
+  color: $LightGreen;
+}
+
+.switchListMap__text_active {
+  @include MontserratBold(16px, 30px);
+  color: $White;
+  padding: 5px 30px;
+  border-radius: 20px;
+  background-color: $Green;
+  margin: 0;
+}
+
+.switchListMap__text_active:hover {
+  color: $White;
+}
+

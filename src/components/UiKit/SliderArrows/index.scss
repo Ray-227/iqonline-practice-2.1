@@ -1,0 +1,99 @@
+@import "@/styles/varColors.scss";
+
+.sliderArrows {
+  width: 96px;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.sliderArrows__green {
+  background-color: $Green !important;
+  transition: all ease 150ms;
+}
+
+.sliderArrows__boxArrow {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sliderArrows__boxArrow:hover .sliderArrows__green {
+  opacity: 75%;
+}
+
+.sliderArrows__left {
+  position: relative;
+  width: 22px;
+  height: 3px;
+  background-color: $Stone;
+  display: block;
+  left: 2px;
+}
+.sliderArrows__left::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 3px;
+  background-color: inherit;
+  transform: rotate(-45deg);
+  border-radius: 2px;
+  left: -4px;
+  top: -5px;
+}
+.sliderArrows__left::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 3px;
+  background-color: inherit;
+  transform: rotate(45deg);
+  border-radius: 2px;
+  left: -4px;
+  top: 6px;
+}
+
+
+.sliderArrows__point {
+  width: 6px;
+  height: 6px;
+  background-color: $Stone;
+  border-radius: 100%;
+}
+
+
+.sliderArrows__right {
+  position: relative;
+  width: 22px;
+  height: 3px;
+  background-color: $Stone;
+  display: block;
+  right: 2px;
+}
+.sliderArrows__right::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 3px;
+  background-color: inherit;
+  transform: rotate(45deg);
+  border-radius: 2px;
+  right: -4px;
+  top: -5px;
+}
+.sliderArrows__right::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 3px;
+  background-color: inherit;
+  transform: rotate(-45deg);
+  border-radius: 2px;
+  right: -4px;
+  top: 6px;
+}

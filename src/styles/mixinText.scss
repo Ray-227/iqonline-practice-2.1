@@ -1,3 +1,5 @@
+@import "@/fonts/mixinFonts.scss";
+
 // Desktop
 @mixin Desktop-h1 {
   @include MontserratBold(56px, 68px);

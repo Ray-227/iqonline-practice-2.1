@@ -1,0 +1,45 @@
+@import "@/styles/varColors.scss";
+
+.backButton {
+  width: 38px;
+  height: 38px;
+  background-color: $Green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all ease 200ms;
+  border-radius: 16px 2px 16px 2px;
+}
+
+.backButton:hover {
+  opacity: 75%;
+}
+
+.backButton__topArrow {
+  position: relative;
+  width: 2px;
+  height: 14px;
+  background-color: $White;
+  display: block;
+}
+.backButton__topArrow::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  background-color: inherit;
+  transform: rotate(-45deg);
+  border-radius: 1px;
+  right: -1px;
+}
+.backButton__topArrow::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  background-color: inherit;
+  transform: rotate(45deg);
+  border-radius: 1px;
+  left: -1px;
+}

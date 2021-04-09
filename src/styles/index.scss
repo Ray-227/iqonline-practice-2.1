@@ -1,9 +1,7 @@
 @import "~normalize.css";
 @import "bootstrap-grid.css";
-@import "varColors.scss";
 
-@import "@/fonts/mixinFonts.scss";
-
-@import "@/styles/mixinText.scss";
-
-
+.container-fluid_padding50 {
+  padding-left: 50px;
+  padding-right: 50px;
+}

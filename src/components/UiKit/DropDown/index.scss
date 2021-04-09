@@ -1,0 +1,84 @@
+@import "@/styles/varColors.scss";
+@import "@/styles/mixinText.scss";
+
+.dropDown {
+  display: inline-flex;
+  flex-direction: column;
+  width: auto;
+
+  transition: all ease 200ms;
+}
+
+.dropDown__title {
+  @include MontserratBold(16px, 20px);
+  color: $Earth;
+  margin-bottom: 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+
+.dropDown__arrow {
+  width: 10px;
+  height: 7px;
+  background-image: url('./arrow.svg');
+  display: block;
+  background-repeat: no-repeat;
+  margin-left: 8px;
+  transition: all ease 300ms;
+}
+
+.dropDown__arrow_active {
+  transform: rotate(180deg);
+}
+
+
+.dropDown__line {
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90.06deg, #2983D4 49.95%, #7EC95C 77.15%);
+  border-radius: 10px;
+  margin-bottom: -1px;
+}
+
+.dropDown__ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  height: 0;
+  border: none;
+
+  transition: height ease 500ms;
+}
+
+.dropDonw__ul_open {
+  border-right: solid 1px $Cloud !important;
+  border-left: solid 1px $Cloud !important;
+  border-bottom: solid 1px $Cloud !important;
+
+  height: 205px !important;
+  width: 100%;
+}
+
+.dropDonw__li a {
+  color: $Earth;
+  transition: all ease 150ms;
+  text-decoration: none;
+}
+
+.dropDonw__li a:active, .dropDonw__li a:focus {
+  color: $Earth;
+}
+
+.dropDonw__li {
+  @include Desktop-Body2;
+  margin: 25px;
+}
+
+.dropDonw__li a:hover {
+  color: $Green;
+}

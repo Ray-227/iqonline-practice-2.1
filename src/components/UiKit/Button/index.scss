@@ -1,0 +1,52 @@
+@import "@/styles/varColors.scss";
+@import "@/styles/mixinText.scss";
+
+.green-button {
+  outline: none;
+  border: none;
+  padding: 0;
+  
+  width: 216px;
+  height: 50px;
+  background-color: $Green;
+  color: $White;
+
+  @include Desktop-Button;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 20px 2px 20px 2px;
+
+  transition: all ease 150ms;
+
+  cursor: pointer;
+}
+
+.green-button:hover, .green-button:focus {
+  opacity: 75%;
+  outline: none;
+}
+
+button:disabled,
+button[disabled]{
+  opacity: 25% !important;
+  outline: none;
+}
+
+
+
+.green-button_outline {
+  background-color: $White;
+  border: solid 2px $Green;
+  color: $Earth;
+}
+
+.green-button_outline:hover, .green-button_outline:focus {
+  background-color: $Green;
+  border: none;
+  color: $White;
+  opacity: 1 !important;
+  outline: none;
+}

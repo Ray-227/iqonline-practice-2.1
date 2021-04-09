@@ -1,0 +1,71 @@
+@import "@/styles/varColors.scss";
+
+.circleArrowCenter {
+  width: 45px;
+  height: 45px;
+  border: 1px solid $Cloud;
+  border-radius: 100%;
+
+  position: relative;
+  transition: all ease 150ms;
+
+  cursor: pointer;
+}
+
+.circleArrowCenter__halfСircle {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 47px;
+  height: 47px;
+  
+  border-radius: inherit;
+
+  border: 3px solid $Green;
+
+  clip-path: polygon(100% 100%, 50% 100%, 50% 0%, 100% 0%);
+  transform: rotate(0deg);
+  transition: all ease 400ms;
+}
+
+.circleArrowCenter:hover {
+  opacity: 75%;
+}
+
+.circleArrowCenter:hover .circleArrowCenter__halfСircle {
+  transform: rotate(180deg);
+  opacity: 75%;
+}
+
+
+.circleArrowCenter__arrow {
+  position: relative;
+  top: 20px;
+  width: 18px;
+  height: 2px;
+  background-color: $Green;
+  left: 25%;
+  display: block;
+}
+.circleArrowCenter__arrow::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  top: -3px;
+  right: -3px;
+  background-color: $Green;
+  transform: rotate(45deg);
+  border-radius: 1px;
+}
+.circleArrowCenter__arrow::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  top: 3px;
+  right: -3px;
+  background-color: $Green;
+  transform: rotate(-45deg);
+  border-radius: 1px;
+}
