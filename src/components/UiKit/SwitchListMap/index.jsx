@@ -1,6 +1,8 @@
 import React from 'react';
 import './index.scss';
 
+{/* <SwitchListMap index="NUMBER start 1" text="One text, two text, three text"></SwitchListMap> */}
+
 export default class SwitchListMap extends React.Component {
   constructor(props) {
     super(props);

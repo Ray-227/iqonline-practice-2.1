@@ -19,8 +19,8 @@
   position: relative;
   z-index: 2;
   cursor: pointer;
-  transition: all ease 200ms;
-  margin: 0 30px;
+  transition: color ease 300ms;
+  padding: 0 30px;
 }
 
 .switchListMap__text:hover {

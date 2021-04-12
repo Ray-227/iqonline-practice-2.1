@@ -1,0 +1,98 @@
+{
+  "1": {
+    "id": "1",
+    "logo": "src/images/prots/post1-logo.png",
+    "image": "src/images/prots/post1-image.png",
+    "title": "Альпийская долина",
+    "description": "с. Кулига, 25 км по Ирбитскому тракту, уникальный природный ландшафт",
+    "sold": "618",
+    "booked": "8",
+    "available": "233",
+    "sizeMin": "10",
+    "sizeMax": "12"
+  },
+  "2": {
+    "id": "2",
+    "logo": "src/images/prots/post1-logo.png",
+    "image": "src/images/prots/post1-image.png",
+    "title": "Альпийская долина",
+    "description": "с. Кулига, 25 км по Ирбитскому тракту, уникальный природный ландшафт",
+    "sold": "618",
+    "booked": "8",
+    "available": "233",
+    "sizeMin": "10",
+    "sizeMax": "12"
+  },
+  "3": {
+    "id": "3",
+    "logo": "src/images/prots/post1-logo.png",
+    "image": "src/images/prots/post1-image.png",
+    "title": "Альпийская долина",
+    "description": "с. Кулига, 25 км по Ирбитскому тракту, уникальный природный ландшафт",
+    "sold": "618",
+    "booked": "8",
+    "available": "233",
+    "sizeMin": "10",
+    "sizeMax": "12"
+  },
+  "4": {
+    "id": "4",
+    "logo": "src/images/prots/post1-logo.png",
+    "image": "src/images/prots/post1-image.png",
+    "title": "Альпийская долина",
+    "description": "с. Кулига, 25 км по Ирбитскому тракту, уникальный природный ландшафт",
+    "sold": "618",
+    "booked": "8",
+    "available": "233",
+    "sizeMin": "10",
+    "sizeMax": "12"
+  },
+  "5": {
+    "id": "5",
+    "logo": "src/images/prots/post1-logo.png",
+    "image": "src/images/prots/post1-image.png",
+    "title": "Альпийская долина",
+    "description": "с. Кулига, 25 км по Ирбитскому тракту, уникальный природный ландшафт",
+    "sold": "618",
+    "booked": "8",
+    "available": "233",
+    "sizeMin": "10",
+    "sizeMax": "12"
+  },
+  "6": {
+    "id": "6",
+    "logo": "src/images/prots/post1-logo.png",
+    "image": "src/images/prots/post1-image.png",
+    "title": "Альпийская долина",
+    "description": "с. Кулига, 25 км по Ирбитскому тракту, уникальный природный ландшафт",
+    "sold": "618",
+    "booked": "8",
+    "available": "233",
+    "sizeMin": "10",
+    "sizeMax": "12"
+  },
+  "7": {
+    "id": "7",
+    "logo": "src/images/prots/post1-logo.png",
+    "image": "src/images/prots/post1-image.png",
+    "title": "Альпийская долина",
+    "description": "с. Кулига, 25 км по Ирбитскому тракту, уникальный природный ландшафт",
+    "sold": "618",
+    "booked": "8",
+    "available": "233",
+    "sizeMin": "10",
+    "sizeMax": "12"
+  },
+  "8": {
+    "id": "8",
+    "logo": "src/images/prots/post1-logo.png",
+    "image": "src/images/prots/post1-image.png",
+    "title": "Альпийская долина",
+    "description": "с. Кулига, 25 км по Ирбитскому тракту, уникальный природный ландшафт",
+    "sold": "618",
+    "booked": "8",
+    "available": "233",
+    "sizeMin": "10",
+    "sizeMax": "12"
+  }
+}

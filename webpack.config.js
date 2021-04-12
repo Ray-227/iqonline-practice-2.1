@@ -86,6 +86,7 @@ const plugins = () => {
   const base = [
     new HTMLWebpackPlugin({
       template: './index.html',
+      favicon: './favicon.svg',
       inject: true,
       minify: {
         collapseWhitespace: isProd,
@@ -115,7 +116,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
+      '@': path.resolve(__dirname, 'src')
     }
   },
   optimization: optimization(),
