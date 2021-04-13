@@ -18,9 +18,9 @@
   align-items: center;
 
   position: absolute;
-  left: 0;
 
-  transition: left ease 200ms;
+  left: 0;
+  transition: left ease-out 500ms;
 }
 
 .sliderProts__item {
@@ -40,6 +40,14 @@
 
 .sliderProts__item:hover {
   box-shadow: 2px 2px 10px 0px rgba(139, 139, 139, 0.5);
+}
+
+.sliderProts__item_sold {
+  opacity: 50%;
+
+  &:hover {
+    box-shadow: none !important;
+  }
 }
 
 
@@ -64,8 +72,16 @@
   position: relative;
 }
 
-.sliderProts__logo > img, .sliderProts__image > img {
+.sliderProts__logo > img {
   object-fit: none;
+  object-position: center center;
+  width: 100%;
+  height: 100%;
+}
+
+
+.sliderProts__image > img {
+  object-fit: cover;
   object-position: center center;
   width: 100%;
   height: 100%;

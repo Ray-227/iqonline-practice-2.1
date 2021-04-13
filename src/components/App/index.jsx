@@ -42,40 +42,25 @@ const Lightbulb = () => (
 
 // import {Time, Leaf, Infrastructure, Lightbulb, GreenLock, GreenSandyGlass, GreenCircleArrow} from '@/svg/getSvgImages.jsx';
 
-// ===[ Ui Kit ]===
-import Button from '@/components/UiKit/Button/index.jsx';
-{/*
-  <Button value="Normal"></Button>
-    OR
-  <Button value="Normal" disabled></Button>
-    OR
-  <Button value="Normal" style="outline"></Button>
-    OR
-  <Button value="Normal" style="outline" disabled></Button>
-*/}
-
-import CircleArrowCenter from '@/components/UiKit/CircleArrowCenter/index.jsx';
-
-import SliderArrows from '@/components/UiKit/SliderArrows/index.jsx';
-
-import BackButton from '@/components/UiKit/BackButton/index.jsx';
-
-import SwitchListMap from '@/components/UiKit/SwitchListMap/index.jsx';
-{/* <SwitchListMap index="NUMBER start 1" text="One text, two text, three text"></SwitchListMap> */}
-
-import DropDown from '@/components/UiKit/DropDown/index.jsx';
-
 
 // ===[ Blocks ]===
+// 1
 import Header from '@/components/Blocks/Header/index.jsx';
+// 2
 import SliderPorts from '@/components/Blocks/sliderProts/index.jsx';
+// 9
+import SliderNews from '@/components/Blocks/sliderNews/index.jsx';
+
+
+
+import DropDown from '@/components/UiKit/DropDown/index.jsx';
 
 
 export default class App extends React.Component {
   render() {
     return (
       <div className="container-fluid container-fluid_padding50">
-        <SliderPorts></SliderPorts>
+        <Header></Header>
       </div>
     )
   }

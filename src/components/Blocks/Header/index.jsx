@@ -10,7 +10,11 @@ export default class Header extends React.Component {
 
   render() {
     return (
-      <Menu></Menu>
+      <div className="row">
+        <div className="col-12">
+          <Menu></Menu>
+        </div>
+      </div>
     )
   }
 }

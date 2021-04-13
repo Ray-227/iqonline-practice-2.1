@@ -9,7 +9,8 @@
     "booked": "8",
     "available": "233",
     "sizeMin": "10",
-    "sizeMax": "12"
+    "sizeMax": "12",
+    "soldClosed": "false"
   },
   "2": {
     "id": "2",
@@ -21,7 +22,8 @@
     "booked": "8",
     "available": "233",
     "sizeMin": "10",
-    "sizeMax": "12"
+    "sizeMax": "12",
+    "soldClosed": "false"
   },
   "3": {
     "id": "3",
@@ -33,7 +35,8 @@
     "booked": "8",
     "available": "233",
     "sizeMin": "10",
-    "sizeMax": "12"
+    "sizeMax": "12",
+    "soldClosed": "false"
   },
   "4": {
     "id": "4",
@@ -45,7 +48,8 @@
     "booked": "8",
     "available": "233",
     "sizeMin": "10",
-    "sizeMax": "12"
+    "sizeMax": "12",
+    "soldClosed": "true"
   },
   "5": {
     "id": "5",
@@ -57,7 +61,8 @@
     "booked": "8",
     "available": "233",
     "sizeMin": "10",
-    "sizeMax": "12"
+    "sizeMax": "12",
+    "soldClosed": "false"
   },
   "6": {
     "id": "6",
@@ -69,7 +74,8 @@
     "booked": "8",
     "available": "233",
     "sizeMin": "10",
-    "sizeMax": "12"
+    "sizeMax": "12",
+    "soldClosed": "false"
   },
   "7": {
     "id": "7",
@@ -81,7 +87,8 @@
     "booked": "8",
     "available": "233",
     "sizeMin": "10",
-    "sizeMax": "12"
+    "sizeMax": "12",
+    "soldClosed": "false"
   },
   "8": {
     "id": "8",
@@ -93,6 +100,7 @@
     "booked": "8",
     "available": "233",
     "sizeMin": "10",
-    "sizeMax": "12"
+    "sizeMax": "12",
+    "soldClosed": "false"
   }
 }

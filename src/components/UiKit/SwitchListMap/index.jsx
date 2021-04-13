@@ -9,7 +9,7 @@ export default class SwitchListMap extends React.Component {
 
     this.state = {
       target: 0,
-      index: Number(this.props.index) - 1,
+      index: 0,
       text: this.props.text.split(',').map(item => item.trim())
     };
 
@@ -25,6 +25,16 @@ export default class SwitchListMap extends React.Component {
       
       this.setState({target: e.target.getAttribute('data-index')});
     }
+  }
+
+  componentDidMount() {
+    let switchIndex = Number(this.props.index) - 1;
+
+    if (document.querySelectorAll('.switchListMap').length === 1) {
+      switchIndex = 0; 
+    }
+
+    this.setState({index: switchIndex});
   }
 
   render() {

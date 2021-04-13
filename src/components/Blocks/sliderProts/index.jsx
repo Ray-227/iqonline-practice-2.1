@@ -38,19 +38,91 @@ const GreenCircleArrow = () => (
 export default class SliderProts extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      index: 1,
+      pointGreenIndex: 0,
+      countPoint: 2
+    }
+
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick(e) {
+
+    const sliderProts = document.querySelector('.sliderProts');
+    // item слайдера (участок)
+    const sliderProtsItem = sliderProts.querySelectorAll('.sliderProts__item');
+    const sliderItemWidth = sliderProtsItem[0].offsetWidth;
+    const countItem = sliderProtsItem.length; // 8
+
+    function prevItem() {
+      // const left = sliderItemWidth * 4 / 2;
+
+      sliderProts.style.left = 0 + 'px';
+    }
+
+    function nextItem() {
+      const left = sliderItemWidth * 4;
+
+      sliderProts.style.left = -left + 'px';
+    }
+
+
+    const sliderArrows = document.querySelectorAll('.sliderArrows')[this.state.index - 1];
+    const points = sliderArrows.querySelectorAll('.sliderArrows__point');
+    const left = sliderArrows.querySelector('.sliderArrows__left');
+    const right = sliderArrows.querySelector('.sliderArrows__right');
+
+    let target = e.target.children[0] || e.target;
+
+    if ( target.className.includes('sliderArrows__left') && this.state.pointGreenIndex - 1 >= 0 ) {
+
+      // Переключаем элемент
+      prevItem();
+
+      // Удаляем цвет точки
+      points[this.state.pointGreenIndex].classList.remove('sliderArrows__green');
+
+      // Меняем цвет стрелки
+      if (this.state.pointGreenIndex - 1 === 0) {
+        left.classList.remove('sliderArrows__green');
+        right.classList.add('sliderArrows__green');
+      }
+
+      // Добавляем цвет точки
+      points[this.state.pointGreenIndex - 1].classList.add('sliderArrows__green');
+      // Запоминаем на какой точке цвет
+      this.setState({pointGreenIndex: this.state.pointGreenIndex - 1});
+    } else if ( target.className.includes('sliderArrows__right') && this.state.pointGreenIndex + 1 <= this.state.countPoint - 1) {
+
+      // Переключаем элемент
+      nextItem();
+
+      // Удаляем цвет точки
+      points[this.state.pointGreenIndex].classList.remove('sliderArrows__green');
+
+      // Меняем цвет стрелки
+      if (this.state.pointGreenIndex + 1 === this.state.countPoint - 1) {
+        left.classList.add('sliderArrows__green');
+        right.classList.remove('sliderArrows__green');
+      }
+
+      // Добавляем цвет точки
+      points[this.state.pointGreenIndex + 1].classList.add('sliderArrows__green');
+      // Запоминаем на какой точке цвет
+      this.setState({pointGreenIndex: this.state.pointGreenIndex + 1});
+    }
+
   }
 
   componentDidMount() {
     const sliderProtsWrapper = document.querySelector('.sliderProts-wrapper');
     const sliderProtsWrapperHeader = sliderProtsWrapper.querySelector('.sliderProts-wrapper__header');
     const sliderProts = sliderProtsWrapper.querySelector('.sliderProts');
+
+    // Высчитываем и устанавливаем высоту обертке слайдера.
     sliderProtsWrapper.style.minHeight = Number(sliderProts.offsetHeight) + Number(sliderProtsWrapperHeader.scrollHeight) + Number(getComputedStyle(sliderProtsWrapperHeader).marginBottom.replace('px','')) + "px";
-
-    
-    const sliderProtsItem = sliderProts.querySelectorAll('.sliderProts__item');
-
-    sliderProtsItem.forEach( item => {
-    })
   }
 
   render() {
@@ -60,14 +132,20 @@ export default class SliderProts extends React.Component {
       <div className="sliderProts-wrapper">
         <div className="sliderProts-wrapper__header">
           <SwitchListMap index="1" text="Списком, На карте"></SwitchListMap>
-          <SliderArrows index="1" countPoint="2"></SliderArrows>
+          <SliderArrows index={this.state.index} countPoint={this.state.countPoint} onClick={this.handleClick}></SliderArrows>
         </div>
 
         <div className="sliderProts">
           {
             Object.keys(plotsJSON).map( (plot) => {
+              let isClosedClass = false;
+
+              if (plotsJSON[`${plot}`].soldClosed === 'true') {
+                isClosedClass = true;
+              }
+
               return (
-                <div className="sliderProts__item" key={plotsJSON[`${plot}`].id}>
+                <div className={`sliderProts__item ${isClosedClass ? "sliderProts__item_sold" : ""}`} key={plotsJSON[`${plot}`].id}>
                   <div className="sliderProts__header">
                     <div className="sliderProts__logo">
                       <img src={plotsJSON[`${plot}`].logo} alt="Logo"></img>
@@ -87,7 +165,11 @@ export default class SliderProts extends React.Component {
                   </div>
 
                   <div className="sliderProts__footer">
-                    <div className="sliderProts__size">Участки от {plotsJSON[`${plot}`].sizeMin} до {plotsJSON[`${plot}`].sizeMax} соток</div>
+                    <div className="sliderProts__size">
+                      {
+                        isClosedClass ? "Продано" : `Участки от ${plotsJSON[plot].sizeMin} до  ${plotsJSON[plot].sizeMax} соток`
+                      }
+                    </div>
                     <a className="sliderProts__link" href="#"><CircleArrowCenter></CircleArrowCenter></a>
                   </div>
                 </div>
