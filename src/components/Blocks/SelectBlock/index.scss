@@ -1,0 +1,43 @@
+.select-block {
+  margin: 40px 0;
+  padding-top: 35px;
+  padding-bottom: 85px;
+  width: 100%;
+}
+
+.select-block::after, .select-block::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 40px;
+}
+
+.select-block::before {
+  top: -40px;
+  box-shadow: inset 10px 0 0 #2983d4,inset 0 10px 0 #2983d4,inset -10px 0 0 #2983d4;
+}
+
+.select-block::after {
+  bottom: -40px;
+  box-shadow: inset 10px 0 0 #7ec95c,inset 0 -10px 0 #7ec95c,inset -10px 0 0 #7ec95c;
+}
+
+.select-block-img {
+  background-image: url('@/images/abstractImage.png');
+  background-size: cover;
+  background-position: center center;
+}
+
+.select-block__left-line {
+  position: absolute;
+  width: 10px;
+  top: -40px;
+  left: 0;
+  bottom: -40px;
+  background: linear-gradient(180deg,#2983d4 0,#7ec95c 70px);
+}
+
+.select-block-margin {
+  margin: 40px 0;
+}

@@ -13,8 +13,7 @@
 
 .dropDown__title {
   @include MontserratBold(16px, 20px);
-  color: $Earth;
-  margin-bottom: 15px;
+  color: inherit;
   position: relative;
   display: flex;
   align-items: center;
@@ -69,7 +68,7 @@
   background-color: $White;
   z-index: 1;
 
-  width: 100%;
+  min-width: 100%;
 }
 
 .dropDonw__ul_open {
@@ -91,7 +90,7 @@
 }
 
 .dropDonw__li {
-  @include Desktop-Body2;
+  @include Desktop-Body3;
   margin: 25px;
 }
 

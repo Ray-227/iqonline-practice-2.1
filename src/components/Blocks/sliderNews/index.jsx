@@ -125,7 +125,7 @@ export default class SliderNews extends React.Component {
           <div className="news-wrapper">
             <div className="news__title">А что у нас нового?</div>
             <div className="news__header">
-              <SwitchListMap index="2" text="Новости, История жителей, Полезные статьи"></SwitchListMap>
+              <SwitchListMap index="3" text="Новости, История жителей, Полезные статьи"></SwitchListMap>
               <SliderArrows index={this.state.index} countPoint={this.state.countPoint} onClick={this.handleClick}></SliderArrows>
             </div>
 

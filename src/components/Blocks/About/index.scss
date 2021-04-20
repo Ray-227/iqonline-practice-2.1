@@ -1,0 +1,114 @@
+@import "@/styles/varColors.scss";
+@import "@/styles/mixinText.scss";
+
+.about {
+  margin: 100px 0;
+}
+
+.about__title {
+  @include Desktop-h2;
+  color: $LightEarth;
+  margin-bottom: 50px;
+}
+
+.about__grid {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: repeat(3, auto);
+}
+
+.about__grid-item {
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+
+.about__grid-item:nth-child(1) { 
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  height: 440px;
+}
+
+.about__grid-item:nth-child(3) { 
+  height: 245px !important;
+}
+
+.about__grid-item:not(:nth-child(1)) { 
+  height: 180px;
+}
+
+.about__grid-item-flex {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.about__grid-item-left {
+  width: 50%;
+  background-color: $Sky;
+  margin-right: 15px;
+  border-radius: 3px;
+}
+
+.about__grid-item-right {
+  width: 50%;
+  background-color: $lightBeige;
+  border-radius: 3px;
+}
+
+
+.about__item-one{
+  background-image: url('@/images/about.png');
+  background-size: cover;
+  background-repeat: none;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+}
+
+.about__grid-item:nth-child(2) { 
+  border: solid 1px $Cloud;
+}
+
+.about__grid-item:nth-child(4) { 
+  border: solid 1px $Cloud;
+}
+
+.about__grid-item:nth-child(5) { 
+  background: $Green;
+}
+
+
+.about__item-content {
+  padding: 35px;
+}
+
+.about__item-title {
+  @include Desktop-h4;
+  color: $Earth;
+  margin-bottom: 20px
+}
+
+.about__item-desc {
+  @include Desktop-Body3;
+  color: $Earth;
+}
+
+.about__item-title_light {
+  @include Desktop-h4;
+  color: $White;
+  margin-bottom: 20px
+}
+
+.about__item-desc_light {
+  @include Desktop-Body3;
+  color: $White;
+}
+
+
+
+

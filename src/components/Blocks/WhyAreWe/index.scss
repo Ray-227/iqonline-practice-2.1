@@ -1,0 +1,129 @@
+@import "@/styles/varColors.scss";
+@import "@/styles/mixinText.scss";
+
+.why-are-we {
+  margin: 100px 0;
+}
+
+.why-are-we__title-header {
+  @include Desktop-h2;
+  color: $LightEarth;
+  margin-bottom: 40px;
+}
+
+.why-are-we__grid {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+}
+
+.why-are-we__grid-item {
+  border-radius: 3px;
+}
+
+.why-are-we__grid-item:nth-child(1), .why-are-we__grid-item:nth-child(2), .why-are-we__grid-item:nth-child(3), .why-are-we__grid-item:nth-child(4) {
+  height: 240px;
+  background-color: $lightBeige;
+}
+
+.why-are-we__grid-item:nth-child(5) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 4;
+
+  height: 440px;
+
+  border: solid 1px $Cloud;
+}
+
+.why-are-we__grid-item:nth-child(6) {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  height: 210px;
+}
+
+.why-are-we__grid-item:nth-child(7) {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+  height: 210px;
+}
+
+
+.why-are-we__content {
+  padding: 35px;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.why-are-we__title {
+  @include Desktop-h3;
+  color: $Earth;
+}
+.why-are-we__title_light {
+  @include Desktop-h3;
+  color: $White;
+}
+
+.why-are-we__desc {
+  margin-top: 20px;
+  @include Desktop-Body2;
+  color: $Earth;
+}
+
+.why-are-we__icon {
+  width: 190px;
+  height: 180px;
+}
+
+.why-are-we__img {
+  background-size: cover;
+  background-repeat: none;
+  background-position: center center;
+  height: 100%;
+}
+
+.why-are-we__img-lamp {
+  background-image: url('@/images/lamp.png');
+}
+.why-are-we__img-road {
+  background-image: url('@/images/road.png');
+}
+.why-are-we__img-pole {
+  background-image: url('@/images/electric-pole.png');
+}
+.why-are-we__img-field {
+  background-image: url('@/images/field.png');
+}
+
+
+.why-are-we__icon-small {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+}
+
+.why-are-we__content-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.why-are-we__content-header > .why-are-we__content-header-text {
+  width: 45%;
+}
+
+.why-are-we__content-footer {
+  align-self: flex-start;
+  margin-top: auto;
+}

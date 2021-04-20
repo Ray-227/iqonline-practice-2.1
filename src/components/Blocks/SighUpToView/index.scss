@@ -1,0 +1,19 @@
+@import "@/styles/varColors.scss";
+@import "@/styles/mixinText.scss";
+
+.sighn-up-to-view__header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+.sighn-up-to-view__title {
+  width: 300px;
+}
+
+
+
+.sighn-up-to-view__description {
+  @include Desktop-Body2;
+  color: $LightEarth;
+  width: 50%;
+}

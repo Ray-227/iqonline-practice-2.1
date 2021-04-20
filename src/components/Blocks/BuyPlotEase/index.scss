@@ -1,0 +1,64 @@
+@import "@/styles/varColors.scss";
+@import "@/styles/mixinText.scss";
+
+.switch-list-map {
+  margin: 100px 0;
+}
+
+.switch-list-map__title {
+  @include Desktop-h2;
+  color: $Earth;
+  margin-bottom: 40px;
+}
+
+.switch-list-map__swicth {
+  margin-bottom: 50px;
+}
+
+
+.switch-list-map__num {
+  @include Desktop-Body3;
+  color: $White;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $Earth;
+  border-radius: 100%;
+}
+
+.switch-list-map__icon {
+  width: 114px;
+  height: 114px;
+  border: solid 1px $Cloud;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.switch-list-map__desc {
+  @include Desktop-Body3;
+  color: $Earth;
+}
+
+.switch-list-map__item {
+  position: relative;
+}
+
+.switch-list-map__item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  background-color: $Cloud;
+  width: 40%;
+  top: 42%;
+  right: 7%;
+}
+
+.switch-list-map__info {
+  display: flex;
+  justify-content: space-between;
+}

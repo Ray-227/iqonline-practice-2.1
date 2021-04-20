@@ -1,0 +1,24 @@
+@import "@/styles/varColors.scss";
+@import "@/styles/mixinText.scss";
+
+.select-plots {
+  padding-left: 100px;
+}
+
+.select-titile {
+  @include Desktop-h2;
+  color: $LightEarth;
+  margin-bottom: 55px;
+}
+
+.select-plots__range-text {
+  @include Desktop-Body2;
+  color: $LightEarth;
+  margin-bottom: 25px;
+}
+
+.select-plots__range-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

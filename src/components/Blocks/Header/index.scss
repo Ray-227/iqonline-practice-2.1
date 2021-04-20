@@ -1,0 +1,100 @@
+@import "@/styles/varColors.scss";
+@import "@/styles/mixinText.scss";
+
+.header {
+  position: relative;
+}
+
+
+.header__image {
+  width: 100%;
+  height: 535px;
+}
+
+.header__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  object-position: center center;
+}
+
+.header__content-wrapper {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 9%;
+  width: 100%;
+  z-index: 2;
+}
+
+.header__content {
+  width: 67%;
+}
+
+  .header__title {
+    @include Desktop-h1;
+    color: $White;
+    margin-bottom: 5px;
+  }
+
+  .header__description {
+    @include Desktop-Body1;
+    color: $White;
+    margin-bottom: 75px;
+  }
+
+  .header__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+  .header__info-item {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .header__info-icon {
+    margin-right: 20px;
+  }
+
+  .header__info-text {
+    width: 180px;
+  }
+
+  .header__info-title {
+    @include Desktop-h4;
+    color: $LightEarth;
+    margin-bottom: 15px;
+  }
+
+  .header__info-description {
+    @include Desktop-Body3;
+    color: $LightEarth;
+  }
+
+
+
+.header__blackBgText {
+  width: 88%;
+  height: 19%;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 23.2%;
+  left: 0;
+  z-index: 1;
+}
+
+.header__abstract-element {
+  background: linear-gradient(180deg, #2983D4 25%, #7EC95C 80%);
+  width: 88%;
+  height: 368px;
+  padding: 10px;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%, 40% 97%, 99% 97%, 99% 3%, 0 3%);
+  z-index: 3;
+}
